@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="absolute inset-0 -z-10 h-full w-full items-center [background:radial-gradient(125%_125%_at_50%_0%,#000_40%,#05046b_100%)]">
+    <main className="absolute overflow-y-hidden inset-0 -z-10 h-full w-full items-center [background:radial-gradient(125%_125%_at_50%_0%,#000_40%,#05046b_100%)]">
       <div className="grid h-screen place-items-center">
         <div className="flex gap-64 mx-7 flex-wrap justify-between slide-in">
           <div className="flex flex-col gap-7 justify-center">
@@ -47,13 +47,15 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <Image
-            src="/AB.png"
-            width={350}
-            height={128}
-            alt="App Demonstration"
-            className="rounded-3xl drop-shadow-lg slide-in-child"
-          />
+          <div className="hidden md:flex">
+            <Image
+              src="/AB.png"
+              width={350}
+              height={128}
+              alt="App Demonstration"
+              className="rounded-3xl drop-shadow-lg slide-in-child"
+            />
+          </div>
         </div>
         <div className="absolute left-0 bottom-0 p-2">
           <p className="opacity-10 border-2 px-2 rounded-full">Made by Keane, Samuel, Isaac, Kurt and Emily, as part of an MCAST Assignment.</p>
