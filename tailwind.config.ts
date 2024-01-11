@@ -1,6 +1,6 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
-const config: Config = {
+export default {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,13 +8,28 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      animation: {
+        'text-gradient': 'text-gradient 1.5s linear infinite',
+        'background-shine': 'background-shine 2s linear infinite',
+        'pulse-slow': 'pulse 6s infinite cubic-bezier(0.4, 0, 0.6, 1)',
+        'border-width': 'border-width 3s infinite alternate',
+      },
+      keyframes: {
+        'text-gradient': {
+          to: {
+            backgroundPosition: '200% center',
+          },
+        },
+        'background-shine': {
+          from: { backgroundPosition: '0 0' },
+          to: { backgroundPosition: '-200% 0' },
+        },
+        'border-width': {
+          from: { width: '10px', opacity: '0' },
+          to: { width: '100px', opacity: '1' },
+        },
       },
     },
   },
   plugins: [],
-}
-export default config
+} satisfies Config;

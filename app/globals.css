@@ -6,3 +6,30 @@ body {
   background-color: rgb(19, 21, 22);
   color: white;
 }
+
+
+.slide-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInAnimation 1s forwards;
+}
+
+.slide-in-child {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInChildAnimation 1s forwards;
+}
+
+@keyframes slideInAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInChildAnimation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
