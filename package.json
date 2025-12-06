@@ -6,29 +6,27 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
-    "framer-motion": "^11.0.5",
-    "next": "14.2.32",
-    "react": "^18",
-    "react-dom": "^18",
-    "vercel": "^33.5.1"
+    "framer-motion": "^12.23.25",
+    "next": "16.0.7",
+    "react": "19.2.1",
+    "react-dom": "19.2.1"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.4.17",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0",
+    "@types/node": "^24",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "autoprefixer": "^10.4.22",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "16.0.7",
     "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^4.1.17",
     "typescript": "^5"
   },
   "overrides": {
-    "semver": "^7.5.3",
-    "debug": "^4.3.4",
-    "undici": "^6.6.2"
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3"
   }
 }
